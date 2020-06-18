@@ -1,16 +1,10 @@
 <template>
-    <div>
-      ahoj
-    </div>
+    <div>cau</div>
 </template>
 
 <script>
-
-
     export default {
-        layouts: 'default',
-        name: "ahoj",
-
+        name: "cau"
     }
 </script>
 

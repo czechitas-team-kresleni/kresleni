@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div style="text-align: center">
+    <div style="width: 20px; background-color: red">Vitejte Menu: domu, kategire</div>
     <nuxt />
   </div>
 </template>
