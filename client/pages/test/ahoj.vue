@@ -18,15 +18,18 @@
 
         data() {
           return {
-              items: this.$store.getters['test/getItems'],
+              // items: this.$store.getters['test/getItems'],
+              items_2: [],
           }
         },
 
         async fetch() {
-          await this.$store.dispatch('test/fetchItems').then((resp) => {
-            this.items = resp;
-            console.log(resp)
-          });
+          // await this.$store.dispatch('test/fetchItems').then((resp) => {
+          //   this.items = resp;
+          //   console.log(resp)
+          // });
+
+          this.$axios.get('')
         }
 
     }
