@@ -38,7 +38,7 @@
           //   console.log(resp)
           // });
 
-          this.$axios.get('')
+
         }
 
     }
