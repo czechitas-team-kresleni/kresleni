@@ -34,6 +34,16 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  data() {
+    return {
+      m: null,
+    }
+  },
+  async fetch() {
+    this.$axios.get('/hello').then((resp) => {
+      console.log(resp)
+    })
   }
 }
 </script>
