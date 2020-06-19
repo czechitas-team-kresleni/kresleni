@@ -20,6 +20,15 @@
           return {
               // items: this.$store.getters['test/getItems'],
               items_2: [],
+
+              user: {
+                id: 1,
+                name: "pepa",
+                level: {
+                  uroven: 1,
+                  total_exp: 2423
+                }
+              }
           }
         },
 

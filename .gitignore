@@ -12,3 +12,4 @@ npm-debug.log
 yarn-error.log
 client/node_modules
 client/.nuxt
+.idea
