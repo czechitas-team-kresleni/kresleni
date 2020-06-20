@@ -51,9 +51,7 @@
         <v-btn  color="grey darken-3" to="/">Domu</v-btn>
         <v-btn  color="grey darken-3" to="/challenges/send">Dnesni</v-btn>
         <v-btn  color="grey darken-3" to="/challenges">Galerie</v-btn>
-        <v-btn  color="grey darken-3">
-          <span>Profil</span>
-        </v-btn>
+       <v-btn color="grey darken-3" to='/profil'>Profil</v-btn>
       </v-toolbar-items>
     </v-app-bar>
 

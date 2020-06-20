@@ -13,6 +13,19 @@ export const getters = {
     return state.kresby;
   },
   getUsers:(state) => {
+
+    let users = [];
+    state.users.forEach(function (user) {
+
+      // state.levels.find(exp => {
+
+      // })
+
+      //((user.exp - previous_threshold) * 100) / (next_threshold - previous_threshold);
+      //user.procento = nejaky vypocet
+    })
+    return users;
+
     return state.users;
   },
   getLevels:(state) => {

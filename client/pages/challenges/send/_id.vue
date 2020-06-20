@@ -37,15 +37,6 @@
           outlined
           tile
         >
-        <div>
-             <h3> Vlastní poznámky:</h3>
-            <v-textarea
-          solo
-          name="input-7-4"
-          label="Sem si můžeš napsat poznámku"
-        ></v-textarea>
-            
-        </div>
 
         <div>
         <h3> Nahrát</h3>
@@ -54,8 +45,18 @@
         filled
         prepend-icon="mdi-camera"
         ></v-file-input>
-         <v-btn block color="grey" dark>Block Button</v-btn>
        
+        <div>
+        <h3> Vlastní poznámky:</h3>
+        <v-textarea
+          solo
+          name="input-7-4"
+          label="Sem si můžeš napsat poznámku"
+            ></v-textarea>
+
+         <v-btn block color="grey" dark>Block Button</v-btn>
+            
+        </div>
 
         </div>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-      <div class="d-flex" style="justify-content: space-between">
+      <div  class="d-flex" style="justify-content: space-between">
            <h3 class="text-left ml-3">{{title}}</h3>
            <v-btn class="float-right" :to="'/challenges/' + game.id">Celá galerie</v-btn>
       </div>
