@@ -36,7 +36,7 @@
           align="center"
           justify="center"
         >
-          <v-col cols="10">
+          <v-col cols="12">
             <nuxt />
           </v-col>
         </v-row>
