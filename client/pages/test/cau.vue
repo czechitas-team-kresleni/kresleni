@@ -1,5 +1,6 @@
 <template>
   <div>
+    <login />
     <div>
       <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
         <b-dropdown-item>First Action</b-dropdown-item>
@@ -32,8 +33,14 @@
 </template>
 
 <script>
+import Login from '../../components/Login.vue';
+
     export default {
-        name: "cau"
+        name: "cau",
+
+        components: {
+          login: Login
+        }
     }
 </script>
 
