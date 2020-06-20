@@ -26,7 +26,7 @@
          <v-btn to="/">Domu</v-btn>
          <v-btn to='/challenges/send'>Dnesni</v-btn>
          <v-btn to="/challenges">Galerie</v-btn>
-         <v-btn><span >Profil</span></v-btn>
+         <v-btn to='/profil'><span >Profil</span></v-btn>
         </v-toolbar-items>
     </v-app-bar>
 

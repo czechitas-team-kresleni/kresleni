@@ -59,8 +59,8 @@
 
 
 <script>
-import Mojegalerie from "../../components/Mojegalerie.vue"
-import Statistika from "../../components/Statistika.vue"
+import Mojegalerie from "../components/Mojegalerie.vue"
+import Statistika from "../components/Statistika.vue"
 export default {
   layouts: "default",
   name: "profil",
