@@ -15,6 +15,9 @@ class CreateHandInRatingTable extends Migration
     {
         Schema::create('hand_in_rating', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('hand_in_id');
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('rating_id');
             $table->timestamps();
         });
     }

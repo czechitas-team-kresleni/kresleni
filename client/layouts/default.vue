@@ -19,7 +19,7 @@
         v-if="primaryDrawer.type !== 'permanent'"
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title>Vuetify</v-toolbar-title>
+
 
 
       <v-toolbar-items>
@@ -67,6 +67,8 @@
         inset: false,
       },
     }),
+    async fetch() {
+      this.$store.dispatch('global/fetchItems');
+    }
   }
 </script>
-About

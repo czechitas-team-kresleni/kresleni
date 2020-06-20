@@ -15,6 +15,9 @@ class CreateGameCategoriesTable extends Migration
     {
         Schema::create('game_categories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('game_id');
+            $table->string('name');
+            $table->integer('exp_value');
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ class CreateGameTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('link');
+            $table->integer('exp');
             $table->dateTime('available_from');
             $table->timestamps();
         });
