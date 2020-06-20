@@ -1,6 +1,12 @@
 <template>
   <div>
-      <h3 class="text-left ml-3">Název výzvy</h3>
+
+      <div class="d-flex" style="justify-content: space-between">
+           <h3 class="text-left ml-3">{{title}}</h3>
+           <v-btn class="float-right" :to="'/challenges/' + game.id">Celá galerie</v-btn>
+      </div>
+     
+      
        
   <v-row>
     <v-col cols="12" >
@@ -8,15 +14,14 @@
         <v-container fluid>
           <v-row>
             <v-col
-              v-for="n in 6"
-              :key="n"
+              v-for="kresba in kresby"
+              :key="kresba.id"
               class="d-flex child-flex"
               cols="2"
             >
               <v-card flat tile class="d-flex">
                 <v-img
-                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                  :src="kresba.link"
                   aspect-ratio="1"
                   class="grey lighten-2"
                 >
@@ -44,7 +49,20 @@
 
 <script>
 export default {
-
+  props: {
+    kresby: {
+      type: Array,
+      default: []
+    },
+    title: {
+      type: String,
+      default: 'vyzva'
+    },
+    game: {
+      type: Object,
+      default: {}
+    }
+  }
 }
 </script>
 

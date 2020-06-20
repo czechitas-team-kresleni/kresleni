@@ -14,18 +14,18 @@
   >
     <v-container class="pa-1">
       <v-item-group
-        v-model="selected"
+        
         multiple
       >
         <v-row>
           <v-col
-            v-for="i in 7"
-            :key="i"
+            v-for="kresba in kresby"
+            :key="kresba.id"
             cols="12"
             md="2"
           >
 
-          <kresba />
+          <kresba :kresba='kresba' />
             
           </v-col>
         </v-row>
@@ -45,6 +45,16 @@ export default {
 
     components: {
         kresba: Kresba
+    },
+    name: 'detai-galerie-hry',
+    data() {
+        return {
+            kresby: []
+        }
+    },
+
+    created() {
+        this.kresby = this.$store.getters['global/getKresby'].filter(kresba => kresba.game_id == this.$route.params.id)
     }
 
 }

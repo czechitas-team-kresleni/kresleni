@@ -1,7 +1,14 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "name": "testovaci hra",
-    "exp": 234
+    "exp": 234,
+    "description": "Our constantly changing drawing challenge themes and art prompts are guaranteed to get you outside of your comfort zone while helping you sharpen your skills, gain exposure, and win awesome prizes from our partners. From doodling on coffee cups, to illustrating strangers, explore just how much you can push your creative limits!"
+  },
+  {
+    "id": 2,
+    "name": "142124 hra",
+    "exp": 34,
+    "description": "Our constantly changing drawing challenge themes and art prompts are guaranteed to get you outside of your comfort zone while helping you sharpen your skills, gain exposure, and win awesome prizes from our partners. From doodling on coffee cups, to illustrating strangers, explore just how much you can push your creative limits!"
   }
 ]

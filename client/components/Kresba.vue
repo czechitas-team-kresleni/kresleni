@@ -1,7 +1,21 @@
 <template>
 <div>
 
-    <p>Uživatel</p>
+
+    <div class="d-flex mb-2" style="align-items: center">
+<v-avatar
+                  size="36px"
+                >
+                  <img
+                  class="mr-2"
+                    alt="Avatar"
+                    src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                  >
+                  
+     </v-avatar>
+    <span>{{user.name}}</span>
+    </div>
+    
 
   <v-item >
               <v-img
@@ -20,18 +34,34 @@
              dark
                 >
         </v-btn>
-     </v-icon> {{ count }}
+     </v-icon> {{ kresba.likes }}
  </div>           
 </template>
 
 <script>
 export default {
+    
+    props: {
+        kresba: {
+            type: Object,
+            default: {}
+        }
+    }, 
+    
+
     data() {
         return {
             active: false,
             count: 4,
+            user: {}
         }
+        
+    },
+
+    created() {
+        this.user = this.$store.getters['global/getUsers'].find(user => user.id == this.kresba.user_id)
     }
+
 }
 </script>
 

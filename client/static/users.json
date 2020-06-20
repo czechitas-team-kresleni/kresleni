@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "Alena",
+        "foto": "foto1.jpg",
+        "pocet_exp": 666
+    },
+    {
+        "id": 2,
+        "name": "Jahůdka",
+        "foto": "foto2.jpg",
+        "pocet_exp": 237
+    },
+    {
+        "id": 3,
+        "name": "Kokos",
+        "foto": "foto3.jpg",
+        "pocet_exp": 87
+    },
+    {
+        "id": 4,
+        "name": "Melounek",
+        "foto": "foto4.jpg",
+        "pocet_exp": 358
+    }
+    
+
+]

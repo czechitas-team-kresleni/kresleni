@@ -1,0 +1,27 @@
+[
+{"level": 1,
+"treshold": 0,
+"uroven": 1,
+"nazev": "Zelenáč"
+},
+{"level": 2,
+"treshold": 200,
+"uroven": 2,
+"nazev": "Učedník"
+},
+{"level": 3,
+"treshold": 400,
+"uroven": 3,
+"nazev": "Pokročilý"
+},
+{"level": 4,
+"treshold": 600,
+"uroven": 4,
+"nazev": "Šampión"
+},
+{"level": 5,
+"treshold": 800,
+"uroven": 5,
+"nazev": "Mistr"
+}
+]
