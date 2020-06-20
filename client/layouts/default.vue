@@ -1,56 +1,72 @@
+
 <template>
-  <div style="text-align: center">
-    <div style="width: 20px; background-color: red">Vitejte Menu: domu, kategire</div>
-    <nuxt />
-  </div>
+  <v-app id="sandbox">
+    <v-navigation-drawer
+      v-model="primaryDrawer.model"
+      :clipped="primaryDrawer.clipped"
+      :floating="primaryDrawer.floating"
+      :mini-variant="primaryDrawer.mini"
+      :permanent="true"
+      app
+      overflow
+    ></v-navigation-drawer>
+
+    <v-app-bar
+      :clipped-left="primaryDrawer.clipped"
+      app
+    >
+      <v-app-bar-nav-icon
+        v-if="primaryDrawer.type !== 'permanent'"
+        @click.stop="primaryDrawer.model = !primaryDrawer.model"
+      ></v-app-bar-nav-icon>
+      <v-toolbar-title>Vuetify</v-toolbar-title>
+
+
+      <v-toolbar-items>
+         <v-btn ><span class="menu_item">Úvod</span></v-btn>
+         <v-btn><span class="menu_item">Dnešní Challenge</span></v-btn>
+         <v-btn ><span class="menu_item">Galerie</span></v-btn>
+         <v-btn ><span class="menu_item">Profil</span></v-btn>
+        </v-toolbar-items>
+    </v-app-bar>
+
+    <v-main>
+      <v-container fluid>
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col cols="10">
+            <nuxt />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+
+    <v-footer
+      :inset="footer.inset"
+      app
+    >
+      <span class="px-4">&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
+  </v-app>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+<script>
+  export default {
+    data: () => ({
+      drawers: ['Default (no property)', 'Permanent', 'Temporary'],
+      primaryDrawer: {
+        model: null,
+        type: 'permanent',
+        clipped: true,
+        floating: false,
+        mini: false,
+      },
+      footer: {
+        inset: false,
+      },
+    }),
+  }
+</script>
+About

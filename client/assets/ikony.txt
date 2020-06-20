@@ -1,0 +1,8 @@
+import { mdiPalette } from '@mdi/js';
+import { mdiImageFilterHdr } from '@mdi/js';
+import { mdiBrush } from '@mdi/js';
+import { mdiAccountBox } from '@mdi/js';
+
+
+
+
