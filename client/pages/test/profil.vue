@@ -19,7 +19,6 @@
       :value="calculatePercent"
       color="blue-grey"
       height="25"
-      buffer-value="500"
     >
       <template>
         <strong>{{ Math.ceil(exp) }} bodu</strong>
