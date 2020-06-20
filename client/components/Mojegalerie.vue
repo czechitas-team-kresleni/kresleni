@@ -1,10 +1,9 @@
 <template>
-  <div>
-      <h3 class="text-left ml-3">{{ title }}</h3>
-       
-  <v-row>
-    <v-col cols="12" >
-      <v-card>
+  <div style="height:100%">
+     
+
+      <v-card style="height: inherit" class="pa-2">
+        <h4> Moje dila</h4>
         <v-container fluid>
           <v-row>
             <v-col
@@ -35,26 +34,14 @@
           </v-row>
         </v-container>
       </v-card>
-    </v-col>
-  </v-row>
-          
-
+    
+ 
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    title: {
-      type: String,
-      default: 'Nazev vyzvy'
-    }
-  },
-  data() {
-    return {
 
-    }
-  }
 }
 </script>
 
