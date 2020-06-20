@@ -27,7 +27,10 @@ class AuthController extends Controller
      */
     public function login()
     {
-        $credentials = request(['email', 'password']);
+        $credentials = [
+            'email' => 'a@a.a',
+            'password' => 'password'
+        ];
 
         if (! $token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
@@ -46,17 +49,7 @@ class AuthController extends Controller
         return response()->json(auth()->user());
     }
 
-    public function register(Request $request)
-    {
-        try {
-            $credentials = request(['email', 'password']);
-            $credentials['password'] = Hash::make($credentials['password']);
-            User::query()->create($credentials);
-            return response()->json(['message' => 'Registered successfully']);
-        } catch (\Exception $exception) {
-            return response()->json(['message' => $exception->getMessage()], 400);
-        }
-    }
+
 
     /**
      * Log the user out (Invalidate the token).

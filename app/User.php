@@ -38,6 +38,9 @@ class User extends Authenticatable implements JWTSubject
         'email_verified_at' => 'datetime',
     ];
 
+    protected $appends = ['exp', 'level'];
+    protected $with = ['handIns'];
+
     public function getJWTIdentifier()
     {
         return $this->getKey();
@@ -46,5 +49,35 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    public function getExpAttribute()
+    {
+        $exp = 0;
+        foreach ($this->handIns as $handIn) {
+            foreach ($handIn->rating as $rating) {
+                $exp += $rating->entity->exp;
+            }
+            $exp += $handIn->game->exp();
+        }
+        return $exp;
+    }
+
+    public function getLevelAttribute()
+    {
+        $exp = $this->getExpAttribute();
+        $level = 0;
+        $levels = Level::all();
+        foreach ($levels as $level) {
+
+        }
+    }
+
+    /**
+     * @return HandIn[]|mixed
+     */
+    public function handIns()
+    {
+        return $this->hasMany(HandIn::class);
     }
 }

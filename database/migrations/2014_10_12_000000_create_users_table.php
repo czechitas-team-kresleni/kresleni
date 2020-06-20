@@ -24,6 +24,12 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        \App\User::query()->create([
+            'name' => 'Jméno Příjmení',
+            'email' => 'a@a.a',
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
+        ]);
     }
 
     /**
