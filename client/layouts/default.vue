@@ -59,10 +59,7 @@
 
     <v-main>
       <v-container fluid>
-        <v-row
-          align="center"
-          justify="center"
-        >
+        <v-row align="center" justify="center">
           <v-col cols="12">
             <nuxt />
           </v-col>
