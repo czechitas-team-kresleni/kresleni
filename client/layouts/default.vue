@@ -23,9 +23,9 @@
 
 
       <v-toolbar-items>
-         <v-btn ><span class="menu_item">Úvod</span></v-btn>
-         <v-btn><span class="menu_item">Dnešní Challenge</span></v-btn>
-         <v-btn ><span class="menu_item">Galerie</span></v-btn>
+         <v-btn ><a href="/" class="menu_item">Úvod</a></v-btn>
+         <v-btn><a href="/challenges/send" class="menu_item">Dnešní Challenge</a></v-btn>
+         <v-btn ><a href="/challenges" class="menu_item">Galerie</a></v-btn>
          <v-btn ><span class="menu_item">Profil</span></v-btn>
         </v-toolbar-items>
     </v-app-bar>
