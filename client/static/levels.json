@@ -1,26 +1,26 @@
 [
 {"level": 1,
-"treshold": 0,
+"threshold": 0,
 "uroven": 1,
 "nazev": "Zelenáč"
 },
 {"level": 2,
-"treshold": 200,
+"threshold": 200,
 "uroven": 2,
 "nazev": "Učedník"
 },
 {"level": 3,
-"treshold": 400,
+"threshold": 400,
 "uroven": 3,
 "nazev": "Pokročilý"
 },
 {"level": 4,
-"treshold": 600,
+"threshold": 600,
 "uroven": 4,
 "nazev": "Šampión"
 },
 {"level": 5,
-"treshold": 800,
+"threshold": 800,
 "uroven": 5,
 "nazev": "Mistr"
 }
