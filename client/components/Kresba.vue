@@ -21,8 +21,8 @@
               <v-img
                 :src="`https://picsum.photos/500/300`"
                 height="150"
-                class="text-right pa-2"
-                
+                class="text-right pa-2 clickable"
+                v-on:click='redirect'
               >
                   
               </v-img>
@@ -71,6 +71,9 @@ export default {
                     user_id: 1
                 });
             }
+        },
+        redirect() {
+            return this.$router.push('/kresba/' + this.kresba.id)
         }
     },
 
@@ -88,5 +91,7 @@ export default {
 </script>
 
 <style>
-
+    .clickable {
+        cursor: pointer
+    }
 </style>
