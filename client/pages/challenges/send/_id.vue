@@ -3,7 +3,7 @@
       
   <div class="grey lighten-5 ma-0"  >
 
-    <h2 style="text-align: center; font-weight: 400;">Dnešní výzva</h2>
+    <h2 style="text-align: center; font-weight: 400;">{{game.name}}</h2>
       
     <v-row >
       <v-col 
@@ -47,7 +47,11 @@
         filled
         prepend-icon="mdi-camera"
         ></v-file-input>
-       
+
+        <h3>Link</h3>
+            <v-text-field label="odkaz" :rules="rules" v-model="link" hide-details="auto"></v-text-field>
+
+
         <div>
         <h3> Vlastní poznámky</h3>
         <v-textarea
@@ -58,8 +62,9 @@
 
          <v-btn block color="grey" dark
          v-on:click="sendForm"
+         v-if="!hasSent"
          >Nahrát kresbu a poznámky</v-btn>
-            
+          <span v-else>Již odevzdáno</span>  
         </div>
 
         </div>
@@ -82,23 +87,39 @@ export default {
   data () {
     return {
       file: '',
-      note: ''
-      
+      note: '',
+      link: ""
+    }
+  },
+
+  computed: {
+    hasSent(){
+      return this.$store.getters['global/getKresby'].find(kresba => kresba.game_id== this.$route.params.id && kresba.user_id==1);
+    },
+    game() {
+      return this.$store.getters['global/getGames'].find(game => game.id== this.$route.params.id);
     }
   },
 
   methods: {
     sendForm() {
-      
+      let last_kresba = this.$store.getters['global/getKresby'].slice(-1)[0];
+      let new_id = last_kresba.id + 1;
+      this.$store.dispatch('global/addKresba', {
+        id: new_id,
+        file:this.file, 
+        note:this.note,
+        link:this.link,
+        user_id:1,
+        game_id:this.game.id,
+        likes:0
+      }).then (() => {
+        this.$router.push('/kresba/'+ new_id)
+      })
     }
   },
 
 
-  computed: {
-    game() {
-      return this.$store.getters['global/getGames'].find(game => game.id== this.$route.params.id);
-    }
-  }
 
 }
 </script>

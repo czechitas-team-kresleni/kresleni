@@ -128,6 +128,10 @@ export const mutations = {
     state.likes.splice(state.likes.indexOf(like), 1);
     let kresba = state.kresby.find(kresba => kresba.id === params.kresba_id);
     kresba.likes -= 1;
+  },
+
+  addKresba (state, kresba) {
+    state.kresby.push(kresba);
   }
 }
 
@@ -150,6 +154,10 @@ export const actions = {
       likes: require('../static/likes.json'),
 
     });
+  },
+
+  addKresba({commit}, kresba) {
+    commit('addKresba', kresba)
   }
 
 }

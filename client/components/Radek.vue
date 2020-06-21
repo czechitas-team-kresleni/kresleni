@@ -23,7 +23,8 @@
                 <v-img
                   :src="kresba.link"
                   aspect-ratio="1"
-                  class="grey lighten-2"
+                  class="grey lighten-2 clickable"
+                  v-on:click="redirect(kresba.id)"
                 >
                   <template v-slot:placeholder>
                     <v-row
@@ -62,10 +63,17 @@ export default {
       type: Object,
       default: {}
     }
+  },
+  methods: {
+    redirect(id) {
+      this.$router.push('/kresba/' + id)
+    }
   }
 }
 </script>
 
 <style>
-
+  .clickable {
+    cursor: pointer
+  }
 </style>

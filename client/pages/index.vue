@@ -11,11 +11,11 @@
     <v-divider></v-divider>
 
     <div>
-      <h3 style="text-align: center;  font-weight: 400;">Podívej se, jak si vedou ostatní:</h3>
+      <h3 style="text-align: center;  font-weight: 400;">Hry, které jste ???</h3>
       <div class="d-flex ma-6" style="justify-content: space-between;">
-        <radek />
-        <radek />
-        <radek />
+        <div v-for="game in games" :key="game.id">
+          <span v-on:click="redirect(game.id)" class="clickable">{{ game.name }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -31,9 +31,27 @@ export default {
     return {
       user_name: 'Pepa',
     };
+  },
+  computed: {
+    games(){
+      let odevzdane = this.$store.getters['global/getKresby'].filter(kresba => kresba.user_id == 1);
+      let games = [];
+      odevzdane.forEach(element => {
+        games.push(element.game_id)
+      });
+      return this.$store.getters['global/getGames'].filter(game => !games.includes(game.id))
+    }
+  },
+  methods: {
+    redirect(id) {
+      return this.$router.push('/challenges/send/' + id)
+    }
   }
 };
 </script>
 
 <style>
+.clickable {
+  cursor: pointer;
+}
 </style>

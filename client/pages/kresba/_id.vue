@@ -17,7 +17,7 @@ export default {
 
     computed: {
         kresba () {
-            return this.$store.getters['global/getKresby'].find(kresba => kresba.id== this.$route.params.id)
+            return this.$store.getters['global/getKresby'].find(kresba => kresba.id == this.$route.params.id)
         }
     }
 
