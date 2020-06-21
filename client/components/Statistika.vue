@@ -1,29 +1,35 @@
 <template>
   <div style="height:100%">
-   <v-card style="height: inherit" class="pa-2"> 
-    <h4>Statistika</h4>
-    <p>
-      Mas nyni {{user.exp}} bodu.
+   <v-card style="height: inherit" class="pa-2 mr-2"> 
+    
+    
+    <v-alert
+      color="grey darken-2"
+      dark
+      dense
+      
+      icon= "mdi-account-circle-outline"
+      class="text-center">
+      <h4 style="font-weight: 400;">Statistika</h4>
+    </v-alert>
+     
+    <div class="pa-4">
+      POČET BODŮ:     {{user.exp}}
       <br />
-      Splnil jsi dosud {{user.finished_games}} ukolu.
+      SPLNĚNÉ ÚKOLY:   {{user.finished_games}}
       <br />
-      Ceka Te {{user.unfinished_games}} nesplnenych ukolu.
+      NESPLNĚNÉ ÚKOLY: {{user.unfinished_games}}       
       <br />
-    </p>
+    </div>
    </v-card>
   </div>
+
+    
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      pocetBodu: 60,
-      SplneneUkolyPocet: 10,
-      NesplneneUkolyPocet: 20,
-      pocetDni: 50
-    };
-  },
+  
   props: {
     user:{
       type: Object,

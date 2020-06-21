@@ -2,22 +2,31 @@
   <div style="height:100%">
      
 
-      <v-card style="height: inherit" class="pa-2">
-        <h4> Moje dila</h4>
-        <v-container fluid>
+      <v-card style="height: inherit" class="pa-2 ml-2">
+<v-alert
+      color="grey darken-2"
+      dark
+      dense
+      
+      icon= "mdi-image-frame"
+      class="text-center">
+      <h4 style="font-weight: 400;">Moje díla</h4>
+    </v-alert>
+        
+        <v-container fluid class="pa-4">
           <v-row>
             <v-col
-              v-for="n in 6"
-              :key="n"
+              v-for="image in images"
+              :key="image.id"
               class="d-flex child-flex"
               cols="2"
             >
               <v-card flat tile class="d-flex">
                 <v-img
-                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                  :src="image.link"
                   aspect-ratio="1"
-                  class="grey lighten-2"
+                  class="grey lighten-2 clickable"
+                  @click="redirect(image.id)"
                 >
                   <template v-slot:placeholder>
                     <v-row
@@ -42,9 +51,30 @@
 <script>
 export default {
 
+props: {
+    user:{
+      type: Object,
+      default: {}
+    }
+  },
+computed: {
+  images() {
+      return this.$store.getters['global/getKresby'].filter(kresba => kresba.user_id == this.user.id)
+    },
+},
+
+methods: {
+  redirect(id) {
+            this.$router.push('/kresba/' + id)
+        }
+}
+
 }
 </script>
 
 <style>
+.clickable {
+  cursor: pointer;
+}
 
 </style>
