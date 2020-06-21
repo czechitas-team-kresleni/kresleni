@@ -16,30 +16,43 @@
       <div>
       
 
-        <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user_name}}!</b-alert>
+        <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user.name}}!</b-alert>
 
 
       <v-divider class="my-3"></v-divider>
 
         <v-avatar size="200px" class="pa-4">
-          <img alt="Avatar" src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460" />
+          <img alt="Avatar" v-bind:src="user.foto" />
         </v-avatar>
 
      <v-divider class="my-3"></v-divider>
+
+        <div style="justify-content: space-between" class="d-flex">
+            <div>{{ user.level.threshold }}</div>
+            <div>{{ user.level.next_threshold}}</div>
+        </div>
 
         <v-progress-linear
           background-color="grey darken-1"
           color="grey darken-3"
           height="30"
-          value="55"
+          v-bind:value="user.level.progress"
         >
+
+        
+
          <template>
-        <strong> {{exp}}/{{next_threshold}} bodu</strong>
+        <strong v-if="!user.level.max"> {{user.exp}}/{{user.level.next_threshold}} {{ points(user.exp) }}</strong>
+        <strong v-else> max level</strong>
       </template>
         </v-progress-linear>
 
+        <div class="text-center" v-if="!user.level.max">
+          Chybí vám <strong>{{user.level.exp_needed}}</strong> {{ points(user.level.exp_needed) }} do další úrovně
+        </div>
+
 <v-divider class="my-3"></v-divider>      
-        <b-alert show class="sidebar-level pa-4">{{user_level}}</b-alert>
+        <b-alert show class="sidebar-level pa-4">{{user.level.nazev}}</b-alert>
        
       </div>
     </v-navigation-drawer>
@@ -86,10 +99,7 @@
 export default {
   data: () => ({
     drawers: ["Default (no property)", "Permanent", "Temporary"],
-    user_name: "Pepa",
-    user_level: "zelenac",
-    exp: 450,
-    next_threshold: 600,
+    user:{},
     primaryDrawer: {
       model: null,
       type: "permanent",
@@ -101,8 +111,24 @@ export default {
       inset: false
     }
   }),
-  async fetch() {
+  created () {
     this.$store.dispatch("global/fetchItems");
+    this.user= this.$store.getters['global/getUsers'].find(clovek => clovek.id === 1)
+
+  },
+  fetch() {
+    
+  },
+  methods: {
+    points(exp) {
+      if(exp===1) {
+        return 'bod'
+      } else if (exp>=2 && exp<=4){
+        return 'body'
+      } else {
+        return 'bodů'
+      }
+    }
   }
 };
 </script>

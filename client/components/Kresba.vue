@@ -9,7 +9,7 @@
                   <img
                   class="mr-2"
                     alt="Avatar"
-                    src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                    v-bind:src="user.foto"
                   >
                   
      </v-avatar>

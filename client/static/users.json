@@ -2,22 +2,22 @@
     {
         "id": 1,
         "name": "Alena",
-        "foto": "foto1.jpg"
+        "foto": "https://images.pexels.com/photos/3404200/pexels-photo-3404200.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
     },
     {
         "id": 2,
         "name": "Jahůdka",
-        "foto": "foto2.jpg"
+        "foto": "https://images.unsplash.com/photo-1560155069-ad79768f2666?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1900&q=80"
     },
     {
         "id": 3,
         "name": "Kokos",
-        "foto": "foto3.jpg"
+        "foto": "https://images.unsplash.com/photo-1581375321224-79da6fd32f6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
     },
     {
         "id": 4,
         "name": "Melounek",
-        "foto": "foto4.jpg"
+        "foto": "https://images.unsplash.com/photo-1582281298055-e25b84a30b0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2021&q=80"
     }
     
 
