@@ -3,13 +3,11 @@
    <v-card style="height: inherit" class="pa-2"> 
     <h4>Statistika</h4>
     <p>
-      Mas nyni {{pocetBodu}} bodu.
+      Mas nyni {{user.exp}} bodu.
       <br />
-      Splnil jsi dosud {{SplneneUkolyPocet}} ukolu.
+      Splnil jsi dosud {{user.finished_games}} ukolu.
       <br />
-      Ceka Te {{NesplneneUkolyPocet}} nesplnenych ukolu.
-      <br />
-      Vydrzel jsi {{pocetDni}} dni za sebou.
+      Ceka Te {{user.unfinished_games}} nesplnenych ukolu.
       <br />
     </p>
    </v-card>
@@ -25,6 +23,12 @@ export default {
       NesplneneUkolyPocet: 20,
       pocetDni: 50
     };
+  },
+  props: {
+    user:{
+      type: Object,
+      default: {}
+    }
   }
 };
 </script>

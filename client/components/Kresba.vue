@@ -13,7 +13,7 @@
                   >
                   
      </v-avatar>
-    <span>{{user.name}}</span>
+    <span @click="goToProfile">{{user.name}}</span>
     </div>
     
 
@@ -71,6 +71,9 @@ export default {
                     user_id: 1
                 });
             }
+        },
+        goToProfile() {
+            this.$router.push('/profil/' + this.user.id)
         }
     },
 

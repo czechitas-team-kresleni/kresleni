@@ -64,16 +64,16 @@
       ></v-app-bar-nav-icon>
 
       <v-toolbar-items color="grey darken-3">
-        <v-btn color="grey darken-3" to="/domu">
+        <v-btn color="grey darken-3" to="/">
           <span class="light_text">Domu</span>
         </v-btn>
-        <v-btn color="grey darken-3" to="/challenges/send">
+        <v-btn color="grey darken-3" :to="'/challenges/send/' + last">
           <span class="light_text">Dnesni</span>
         </v-btn>
         <v-btn color="grey darken-3" to="/challenges">
           <span class="light_text">Galerie</span>
         </v-btn>
-        <v-btn color="grey darken-3" to="/profil">
+        <v-btn color="grey darken-3" to="/profil/1">
           <span class="light_text">Profil</span>
         </v-btn>
       </v-toolbar-items>
@@ -117,6 +117,9 @@ export default {
   computed: {
     user() {
       return this.$store.getters['global/getUsers'].find(clovek => clovek.id === 1)
+    },
+    last() {
+      return this.$store.getters['global/getGames'].slice(-1)[0].id
     }
   },
   methods: {
