@@ -39,7 +39,12 @@ export default {
 
     methods: {
         getKresby(game_id) {
-            return this.$store.getters['global/getKresby'].filter(kresba => kresba.game_id === game_id);
+            let kresby= this.$store.getters['global/getKresby'].filter(kresba => kresba.game_id === game_id);
+            if (kresby.length > 6) {
+                return kresby.slice(5);
+            } 
+            return kresby;
+
         }
     }
 

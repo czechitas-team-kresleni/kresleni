@@ -49,14 +49,16 @@
         ></v-file-input>
        
         <div>
-        <h3> Vlastní poznámky:</h3>
+        <h3> Vlastní poznámky</h3>
         <v-textarea
           solo
           name="input-7-4"
           label="Sem si můžeš napsat poznámku"
-            ></v-textarea>
+          v-model="note"></v-textarea>
 
-         <v-btn block color="grey" dark>Block Button</v-btn>
+         <v-btn block color="grey" dark
+         v-on:click="sendForm"
+         >Nahrát kresbu a poznámky</v-btn>
             
         </div>
 
@@ -79,6 +81,14 @@
 export default {
   data () {
     return {
+      file: '',
+      note: ''
+      
+    }
+  },
+
+  methods: {
+    sendForm() {
       
     }
   },
