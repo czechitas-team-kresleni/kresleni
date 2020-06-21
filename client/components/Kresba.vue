@@ -13,7 +13,7 @@
                   >
                   
      </v-avatar>
-    <span>{{user.name}}</span>
+    <span @click="goToProfile">{{user.name}}</span>
     </div>
     
 
@@ -74,6 +74,9 @@ export default {
         },
         redirect() {
             return this.$router.push('/kresba/' + this.kresba.id)
+        },
+        goToProfile() {
+            this.$router.push('/profil/' + this.user.id)
         }
     },
 
