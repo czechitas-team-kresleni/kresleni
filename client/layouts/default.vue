@@ -9,27 +9,38 @@
       :permanent="true"
       app
       overflow
+      class="text-center"
       color="grey lighten-1"
+      
     >
       <div>
-        <p>Vitej zpet, {{user_name}}!</p>
+      
 
-        <v-avatar size="200px">
+        <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user_name}}!</b-alert>
+
+
+      <v-divider class="my-3"></v-divider>
+
+        <v-avatar size="200px" class="pa-4">
           <img alt="Avatar" src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460" />
         </v-avatar>
 
-        <hr />
+     <v-divider class="my-3"></v-divider>
 
         <v-progress-linear
           background-color="grey darken-1"
           color="grey darken-3"
           height="30"
-          value="20"
-        ></v-progress-linear>
+          value="55"
+        >
+         <template>
+        <strong> {{exp}}/{{next_threshold}} bodu</strong>
+      </template>
+        </v-progress-linear>
 
-        <hr />
-
-        <div>{{user_level}}</div>
+<v-divider class="my-3"></v-divider>      
+        <b-alert show class="sidebar-level pa-4">{{user_level}}</b-alert>
+       
       </div>
     </v-navigation-drawer>
 
@@ -55,7 +66,7 @@
       </v-toolbar-items>
     </v-app-bar>
 
-    <v-main>
+    <v-main style="background-color:#FAFAFA">
       <v-container fluid>
         <v-row align="center" justify="center">
           <v-col cols="12">
@@ -77,6 +88,8 @@ export default {
     drawers: ["Default (no property)", "Permanent", "Temporary"],
     user_name: "Pepa",
     user_level: "zelenac",
+    exp: 450,
+    next_threshold: 600,
     primaryDrawer: {
       model: null,
       type: "permanent",
@@ -97,5 +110,21 @@ export default {
 <style>
 .light_text {
   color: #f5f5f5;
+}
+
+.sidebar-level {
+  color: #E0E0E0;
+  background-color: #424242;;
+  text-transform: uppercase;
+  font-weight: 600 ;
+  border: none
+}
+
+.welcome_user {
+  color: black;
+  background-color: #BDBDBD;;
+  font-weight: 400 ;
+  border: none;
+  font-size: 24px;
 }
 </style>

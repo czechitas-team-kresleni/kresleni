@@ -14,6 +14,16 @@
 
       </v-col>
     </v-row>
+<b-container class="bv-example-row">
+  <b-row>
+    <b-col> 1  </b-col>
+    <b-col> 2</b-col>
+    <b-col> 3</b-col>
+    <b-col> 4</b-col>
+    <b-col> 5</b-col>
+  </b-row>
+</b-container>
+  
 
    <v-progress-linear
       :value="calculatePercent"
@@ -29,18 +39,6 @@
       <div>{{ previous_threshold }}</div>
       <div>{{ next_threshold }}</div>
     </div>
-
-    <br>
-
-    <v-row class="mb-6 mt-6" height="25px" no-gutters>
-      <v-col cols-12>
-        <v-card tile height="30px" class="text-center" >
-         
-         <div> {{user_level}} </div>
-          
-        </v-card>
-      </v-col>
-    </v-row>
 
     <v-row class="mb-9" no-gutters>
       <v-col sm="5" md="6" >
@@ -69,7 +67,6 @@ export default {
   },
 
   data: () => ({
-    ttt: 34,
     exp: 450,
     previous_threshold: 300,
     next_threshold: 600,

@@ -1,7 +1,9 @@
 <template>
-  <div>
+
       
-  <v-container class="grey lighten-5">
+  <v-container class="grey lighten-5 ma-0">
+
+
       
     <v-row >
       <v-col 
@@ -65,14 +67,13 @@
     </v-row>
   </v-container>
 
+</template>
       
 
 
 
 
 
-  </div>
-</template>
 
 <script>
 export default {
