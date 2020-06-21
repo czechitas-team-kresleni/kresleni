@@ -20,12 +20,12 @@
         <v-row>
           <v-col
             v-for="kresba in kresby"
-            :key="kresba.id"
+            v-bind:key="kresba.id"
             cols="12"
             md="2"
           >
 
-          <kresba :kresba='kresba' />
+            <kresba v-bind:kresba='kresba' />
             
           </v-col>
         </v-row>
@@ -49,13 +49,18 @@ export default {
     name: 'detai-galerie-hry',
     data() {
         return {
-            kresby: []
+            kresby: [],
+            game: []
         }
     },
+    props: [''],
 
     created() {
+        this.game = this.$store.getters['global/getGames'].find(game => game.id == this.$route.params.id)
         this.kresby = this.$store.getters['global/getKresby'].filter(kresba => kresba.game_id == this.$route.params.id)
-    }
+    },
+     
+    
 
 }
 </script>

@@ -16,16 +16,16 @@
           tile
         >
           <h3>Název</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, facilis.</p>
+      <p>{{game.name}}</p>
 
       <h3>Popis</h3>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reprehenderit harum, saepe beatae ea quo aliquid ratione iusto excepturi alias quod iure molestias id commodi incidunt aperiam mollitia similique, corporis expedita consequuntur consequatur blanditiis! Quod possimus mollitia veniam asperiores voluptatum, explicabo cumque dicta nulla dolores earum voluptatibus maiores ut dolore impedit ipsum ad voluptate, expedita quo nemo error iste aspernatur.</p>
+      <p>{{game.description}}</p>
 
       <h3> Počet bodů</h3>
 
       <div>
-          3
+          {{game.exp}}
         </div>
         </v-card>
       </v-col>
@@ -77,6 +77,18 @@
 
 <script>
 export default {
+  data () {
+    return {
+      
+    }
+  },
+
+
+  computed: {
+    game() {
+      return this.$store.getters['global/getGames'].find(game => game.id== this.$route.params.id);
+    }
+  }
 
 }
 </script>

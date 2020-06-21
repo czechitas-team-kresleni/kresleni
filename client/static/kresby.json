@@ -3,14 +3,12 @@
     "id": 0,
     "user_id": 1,
     "game_id": 1,
-    "likes": 324,
     "link": "https://picsum.photos/500/300"
   },
   {
     "id": 1,
     "user_id": 2,
     "game_id": 1,
-    "likes": 31,
     "link": "https://picsum.photos/500/300"
   }
 ]
