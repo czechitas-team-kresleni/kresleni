@@ -16,7 +16,7 @@
       <div>
       
 
-        <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user_name}}!</b-alert>
+        <b-alert show class="welcome_user my-0 pa-4">Zdravim, {{user_name}}!</b-alert>
 
 
       <v-divider class="my-3"></v-divider>
@@ -51,7 +51,7 @@
       ></v-app-bar-nav-icon>
 
       <v-toolbar-items color="grey darken-3">
-        <v-btn color="grey darken-3" to="/">
+        <v-btn color="grey darken-3" to="/domu">
           <span class="light_text">Domu</span>
         </v-btn>
         <v-btn color="grey darken-3" to="/challenges/send">

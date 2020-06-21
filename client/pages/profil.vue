@@ -1,53 +1,43 @@
 <template>
   <div>
-    <v-row class="mb-9 mt-9" no-gutters>
-      <v-col>
-        <v-card class="pa-2" >
-          <h4>Username</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eligendi obcaecati odio nam, asperiores dolores sint similique. Voluptates cum minima, veritatis reprehenderit vitae delectus tenetur harum maxime, expedita minus autem!</p>
+    <div>
+      <h2 style="text-align: center; font-weight: 400;">Username</h2>
+      <blockquote
+        class="blockquote"
+      >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita tempore laboriosam eum eos quas maiores praesentium beatae pariatur molestiae. Voluptates ut nisi unde eius esse quos ipsum nihil inventore aspernatur?</blockquote>
+      <div class="ml-4 mt-0">
+        <v-icon>{{'mdi-facebook'}}</v-icon>
+        <v-icon>{{'mdi-instagram'}}</v-icon>
+        <v-icon>{{'mdi-artstation'}}</v-icon>
+      </div>
+    </div>
+    <v-divider></v-divider>
+    <v-row class="mb-6 levels" no-gutters>
+      <v-col v-for="n in 5" :key="n">
+        <v-card
+          class="pa-2 text-center levels-row"
+          :class="{level_unlocked: n === 1, level_locked: n !== 1}"
+          tile
+          outlined
+        >
+          {{user_level}}
+          <v-icon v-if="n != 1" style="float: right;">{{ 'mdi-lock'}}</v-icon>
+          <v-icon
+            v-else
+            style="float: right; vertical-align: middle"
+          >{{ 'mdi-lock-open-variant-outline'}}</v-icon>
         </v-card>
-      </v-col>
-      <v-col lg="2">
-        <v-card class="pa-2">
-          <v-img width="100px" height="100px" src="https://picsum.photos/200/300" position="center"></v-img>
-        </v-card>
-
       </v-col>
     </v-row>
-<b-container class="bv-example-row">
-  <b-row>
-    <b-col> 1  </b-col>
-    <b-col> 2</b-col>
-    <b-col> 3</b-col>
-    <b-col> 4</b-col>
-    <b-col> 5</b-col>
-  </b-row>
-</b-container>
-  
 
-   <v-progress-linear
-      :value="calculatePercent"
-      color="blue-grey"
-      height="25"
-    >
-      <template>
-        <strong>{{ Math.ceil(exp) }} bodu</strong>
-      </template>
-    </v-progress-linear>
-
-    <div class="d-flex" style='justify-content: space-between'>
-      <div>{{ previous_threshold }}</div>
-      <div>{{ next_threshold }}</div>
-    </div>
+    <v-divider></v-divider>
 
     <v-row class="mb-9" no-gutters>
-      <v-col sm="5" md="6" >
-            <statistika />
+      <v-col sm="5" md="6">
+        <statistika />
       </v-col>
-      <v-col sm="5"  offset-sm="2" md="6" offset-md="0">
-
-       <galerie />
-     
+      <v-col sm="5" offset-sm="2" md="6" offset-md="0">
+        <galerie />
       </v-col>
     </v-row>
   </div>
@@ -56,14 +46,14 @@
 
 
 <script>
-import Mojegalerie from "../components/Mojegalerie.vue"
-import Statistika from "../components/Statistika.vue"
+import Mojegalerie from "../components/Mojegalerie.vue";
+import Statistika from "../components/Statistika.vue";
 export default {
   layouts: "default",
   name: "profil",
-  components:{
-      galerie: Mojegalerie,
-      statistika: Statistika
+  components: {
+    galerie: Mojegalerie,
+    statistika: Statistika
   },
 
   data: () => ({
@@ -77,28 +67,31 @@ export default {
 
   computed: {
     calculatePercent() {
-      return ((this.exp - this.previous_threshold) * 100) / (this.next_threshold - this.previous_threshold);
+      return (
+        ((this.exp - this.previous_threshold) * 100) /
+        (this.next_threshold - this.previous_threshold)
+      );
     }
   }
-  
-
 };
 </script>
 
 <style>
-.obrazek {
-  width: 100px;
-  height: 100px;
+.levels {
+  line-height: 5rem;
 }
 
-.container1 {
+.levels-row {
   display: flex;
+  justify-content: space-around;
 }
 
-.container2 {
-  display: flex;
-  flex-basis: column;
+.level_unlocked {
+  background-color: #616161 !important;
+  color: #e0e0e0 !important;
 }
 
-
+.level_locked {
+  color: lightgrey !important;
+}
 </style>

@@ -1,9 +1,9 @@
 <template>
 
       
-  <v-container class="grey lighten-5 ma-0">
+  <div class="grey lighten-5 ma-0"  >
 
-
+    <h2 style="text-align: center; font-weight: 400;">Dnešní výzva</h2>
       
     <v-row >
       <v-col 
@@ -65,7 +65,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 
 </template>
       
