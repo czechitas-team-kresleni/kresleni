@@ -19,7 +19,7 @@
 
   <v-item >
               <v-img
-                :src="`https://picsum.photos/500/300`"
+                :src="kresba.link"
                 height="150"
                 class="text-right pa-2 clickable"
                 v-on:click='redirect'
