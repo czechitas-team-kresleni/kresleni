@@ -27,8 +27,8 @@
                   
               </v-img>
     </v-item>
-    <v-icon @click="active = !active" >
-         {{ active ? 'mdi-heart' : 'mdi-heart-outline' }}
+    <v-icon v-on:click="like" >
+         {{ hasLiked ? 'mdi-heart' : 'mdi-heart-outline' }}
         <v-btn
             icon
              dark
@@ -56,6 +56,28 @@ export default {
             user: {}
         }
         
+    },
+
+    methods: {
+        like() {
+            if(!this.hasLiked) {
+                this.$store.dispatch('global/like', {
+                    kresba_id: this.kresba.id,
+                    user_id: 1
+                });
+            } else {
+                this.$store.dispatch('global/dislike', {
+                    kresba_id: this.kresba.id,
+                    user_id: 1
+                });
+            }
+        }
+    },
+
+    computed: {
+        hasLiked() {
+            return this.$store.getters['global/hasLiked'](this.kresba.id, 1)
+        }
     },
 
     created() {

@@ -4,9 +4,10 @@ export const state = () => ({
   users: [],
   levels:[],
   handins:[],
+  likes: []
 })
 
-export const getters = {
+export const getters = { //getters - jen pro čtení
   getGames:(state) => {
     return state.games;
   },
@@ -45,7 +46,7 @@ export const getters = {
 
       //přepočet bodů - bonus za likes
       user.exp = exp;
-      user.exp += likes * 0.5;
+      user.exp += likes * 5;
       
       //nalezení nižších úrovní
       let levels = state.levels.filter(level => level.threshold <= user.exp);
@@ -77,20 +78,68 @@ export const getters = {
 
   getLevels:(state) => {
     return state.levels;
+  },
+
+  hasLiked:(state) => (kresba_id, user_id) => {
+    return !!state.likes.find(like => 
+      like.user_id === user_id && like.kresba_id === kresba_id
+    );
   }
  
 }
 
 export const mutations = {
+
+
+  
+
   setItems(state, items) {
+
+    items.kresby.forEach(function(kresba) {
+      kresba.likes = items.likes.filter(like => like.kresba_id === kresba.id).length;
+    })
+
+
+
     state.games = items.games;
     state.kresby = items.kresby;
     state.users = items.users;
     state.levels = items.levels;
+  },
+
+  like(state, params) {
+    let id = state.likes.slice(-1)[0];
+    if(typeof id === 'undefined') {
+      id = 0;
+    } else {
+      id = id.id + 1;
+    }
+    state.likes.push({
+      id: id,
+      user_id: params.user_id,
+      kresba_id: params.kresba_id
+    })
+    let kresba = state.kresby.find(kresba => kresba.id === params.kresba_id);
+    kresba.likes += 1;
+  },
+
+  dislike(state, params) {
+    let like = state.likes.find(like => like.user_id === params.user_id && like.kresba_id === params.kresba_id);
+    state.likes.splice(state.likes.indexOf(like), 1);
+    let kresba = state.kresby.find(kresba => kresba.id === params.kresba_id);
+    kresba.likes -= 1;
   }
 }
 
 export const actions = {
+
+  async like({commit}, params) {
+    commit('like', params)
+  },
+
+  async dislike({commit}, params) {
+    commit('dislike', params)
+  },
 
   async fetchItems({commit}, params) {
     commit('setItems', {
@@ -98,6 +147,8 @@ export const actions = {
       kresby: require('../static/kresby.json'),
       users: require('../static/users.json'),
       levels: require('../static/levels.json'),
+      likes: require('../static/likes.json'),
+
     });
   }
 

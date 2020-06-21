@@ -99,7 +99,6 @@
 export default {
   data: () => ({
     drawers: ["Default (no property)", "Permanent", "Temporary"],
-    user:{},
     primaryDrawer: {
       model: null,
       type: "permanent",
@@ -113,11 +112,12 @@ export default {
   }),
   created () {
     this.$store.dispatch("global/fetchItems");
-    this.user= this.$store.getters['global/getUsers'].find(clovek => clovek.id === 1)
 
   },
-  fetch() {
-    
+  computed: {
+    user() {
+      return this.$store.getters['global/getUsers'].find(clovek => clovek.id === 1)
+    }
   },
   methods: {
     points(exp) {
