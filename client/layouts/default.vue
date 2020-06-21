@@ -81,6 +81,7 @@
 
     <v-main style="background-color:#FAFAFA">
       <v-container fluid>
+        <span class="clickable" @click="back">zpet</span>
         <v-row align="center" justify="center">
           <v-col cols="12">
             <nuxt />
@@ -131,6 +132,9 @@ export default {
       } else {
         return 'bodů'
       }
+    },
+    back() {
+      this.$router.back()
     }
   }
 };
@@ -155,5 +159,9 @@ export default {
   font-weight: 400 ;
   border: none;
   font-size: 24px;
+}
+
+.clickable {
+  cursor: pointer;
 }
 </style>
