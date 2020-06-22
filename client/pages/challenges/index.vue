@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h2 style="text-align: center; font-weight: 400;"> Předchozí výzvy</h2>
+    <h2> Předchozí výzvy</h2>
 <blockquote class="blockquote">Tady se můžeš podívat, jak se s výzvami vyrovnali ostatní, stačí kliknout na vybranou výzvu  </blockquote>
 
 <hr>

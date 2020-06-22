@@ -1,7 +1,7 @@
 <template>
   <div>
       <h3>Název výzvy</h3>
-      <p>{{game.name}}</p>
+      <p >{{game.name}}</p>
 
       <h3>Zadání</h3>
 

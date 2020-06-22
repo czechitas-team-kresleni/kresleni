@@ -3,7 +3,7 @@
       
   <div class="grey lighten-5 ma-0"  >
 
-    <h2 style="text-align: center; font-weight: 400;">{{game.name}}</h2>
+    <h2>{{game.name}}</h2>
 
     <v-container>  
     <v-row>
@@ -14,16 +14,16 @@
         
         <v-card
           
-          class="pa-3">
-          <h3>Název</h3>
-          <p>{{game.name}}</p>
+          class="pa-3 h-100">
+          <h3 class="mt-4">Název</h3>
+          <p class="px-4">{{game.name}}</p>
 
-          <h3>Popis</h3>
-          <p>{{game.description}}</p>
+          <h3 class="mt-4">Popis</h3>
+          <p class="px-4">{{game.description}}</p>
 
-          <h3> Počet bodů</h3>
+          <h3 class="mt-4"> Počet bodů</h3>
 
-          <div>
+          <div class="px-4">
           {{game.exp}}
           </div>
         </v-card>
@@ -35,7 +35,7 @@
         sm="6">
         
         <v-card
-          class="pa-3">
+          class="pa-3 h-100">
 
           
           <h3> Nahrát</h3>

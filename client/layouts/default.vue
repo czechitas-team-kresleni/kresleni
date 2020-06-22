@@ -78,7 +78,7 @@
 
     <v-main style="background-color:#FAFAFA">
       <v-container fluid>
-        <span class="clickable" @click="back">zpet</span>
+        <span class="clickable" @click="back">zpět</span>
         <v-row align="center" justify="center">
           <v-col cols="12">
             <nuxt />
@@ -164,6 +164,8 @@ export default {
 
 body{
   font-family: 'Montserrat', sans-serif;
+  
+  
 }
 
 h1,
@@ -172,4 +174,18 @@ h3,
 h4 {
    font-family: 'Merriweather', serif;
 }
+h2,
+h3 {
+  text-shadow: 0px 1px 2px  #BDBDBD;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+ }
 </style>

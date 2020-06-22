@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 style="text-align: center; font-weight: 400;">{{user.name}}</h2>
+    <h2>{{user.name}}</h2>
     <div style="display: flex;
     align-items: center;
     justify-content: space-between;">
