@@ -9,12 +9,12 @@
       :permanent="true"
       app
       overflow
-      class="text-center"
+      class="text-center hideable"
       color="grey lighten-1"
-      
+
     >
       <div>
-      
+
         <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user.name}}!</b-alert>
 
         <v-divider class="my-3"></v-divider>
@@ -37,19 +37,19 @@
           class="mx-1 mb-3"
           v-bind:value="user.level.progress"
           >
-              
+
           <strong v-if="!user.level.max"> {{user.exp}}/{{user.level.next_threshold}} {{ points(user.exp) }}</strong>
           <strong v-else> max level</strong>
-        
+
         </v-progress-linear>
 
         <div class="text-center" v-if="!user.level.max">
           Chybí vám <strong>{{user.level.exp_needed}}</strong> {{ points(user.level.exp_needed) }} do další úrovně
         </div>
 
-        <v-divider class="my-3"></v-divider>      
+        <v-divider class="my-3"></v-divider>
         <b-alert show class="sidebar-level pa-4 mx-3">{{user.level.nazev}}</b-alert>
-       
+
       </div>
     </v-navigation-drawer>
 
@@ -76,7 +76,7 @@
       </v-toolbar-items>
     </v-app-bar>
 
-    <v-main style="background-color:#FAFAFA">
+    <v-main style="background-color:#FAFAFA" class="md-padding">
       <v-container fluid>
         <span class="clickable" @click="back">zpět</span>
         <v-row align="center" justify="center">
@@ -164,8 +164,8 @@ export default {
 
 body{
   font-family: 'Montserrat', sans-serif;
-  
-  
+
+
 }
 
 h1,
@@ -188,4 +188,15 @@ p {
   font-style: normal;
   font-weight: normal;
  }
+
+@media(max-width:1200px){
+  .hideable {
+    display: none;
+  }
+
+  .md-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
 </style>
