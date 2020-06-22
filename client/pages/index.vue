@@ -28,11 +28,7 @@ export default {
   components: {
     radek: Radek
   },
-  data() {
-    return {
-      user_name: 'Pepa',
-    };
-  },
+  
   computed: {
     games(){
       let odevzdane = this.$store.getters['global/getKresby'].filter(kresba => kresba.user_id == 1);

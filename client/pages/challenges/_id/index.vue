@@ -8,13 +8,11 @@
       <p> {{game.description}}</p>
 
       
-  <v-card
-    
+  <v-card     
     class="mx-auto"
   >
     <v-container class="pa-1">
       <v-item-group
-        
         multiple
       >
         <v-row>
@@ -53,8 +51,7 @@ export default {
             game: []
         }
     },
-    props: [''],
-
+    
     created() {
         this.game = this.$store.getters['global/getGames'].find(game => game.id == this.$route.params.id)
         this.kresby = this.$store.getters['global/getKresby'].filter(kresba => kresba.game_id == this.$route.params.id)

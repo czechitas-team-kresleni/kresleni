@@ -62,15 +62,6 @@ export default {
     statistika: Statistika
   },
 
-  data: () => ({
-    exp: 450,
-    previous_threshold: 300,
-    next_threshold: 600,
-    user_level: "zelenac"
-
-    //progress: 150,
-  }),
-
   computed: {
     calculatePercent() {
       return (

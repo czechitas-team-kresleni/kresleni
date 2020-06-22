@@ -45,14 +45,14 @@ export default {
     }, 
     
 
-    data() {
-        return {
-            active: false,
-            count: 4,
-            user: {}
-        }
+   // data() {
+   //     return {
+   //         active: false,
+   //         count: 4,
+   //         user: {}
+   //     }
         
-    },
+  //  },
 
     methods: {
         like() {
