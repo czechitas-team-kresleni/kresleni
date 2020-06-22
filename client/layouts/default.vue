@@ -15,44 +15,40 @@
     >
       <div>
       
-
         <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user.name}}!</b-alert>
 
-
-      <v-divider class="my-3"></v-divider>
+        <v-divider class="my-3"></v-divider>
 
         <v-avatar size="200px" class="pa-4">
           <img alt="Avatar" v-bind:src="user.foto" />
         </v-avatar>
 
-     <v-divider class="my-3"></v-divider>
+        <v-divider class="my-3"></v-divider>
 
-        <div style="justify-content: space-between" class="d-flex">
-            <div>{{ user.level.threshold }}</div>
-            <div>{{ user.level.next_threshold}}</div>
+        <div style="justify-content: space-between" class="d-flex mx-1">
+          <div>{{ user.level.threshold }}</div>
+          <div>{{ user.level.next_threshold}}</div>
         </div>
 
         <v-progress-linear
           background-color="grey darken-1"
           color="grey darken-3"
           height="30"
+          class="mx-1 mb-3"
           v-bind:value="user.level.progress"
-        >
-
+          >
+              
+          <strong v-if="!user.level.max"> {{user.exp}}/{{user.level.next_threshold}} {{ points(user.exp) }}</strong>
+          <strong v-else> max level</strong>
         
-
-         <template>
-        <strong v-if="!user.level.max"> {{user.exp}}/{{user.level.next_threshold}} {{ points(user.exp) }}</strong>
-        <strong v-else> max level</strong>
-      </template>
         </v-progress-linear>
 
         <div class="text-center" v-if="!user.level.max">
           Chybí vám <strong>{{user.level.exp_needed}}</strong> {{ points(user.level.exp_needed) }} do další úrovně
         </div>
 
-<v-divider class="my-3"></v-divider>      
-        <b-alert show class="sidebar-level pa-4">{{user.level.nazev}}</b-alert>
+        <v-divider class="my-3"></v-divider>      
+        <b-alert show class="sidebar-level pa-4 mx-3">{{user.level.nazev}}</b-alert>
        
       </div>
     </v-navigation-drawer>
@@ -61,7 +57,8 @@
       <v-app-bar-nav-icon
         v-if="primaryDrawer.type !== 'permanent'"
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
-      ></v-app-bar-nav-icon>
+        >
+      </v-app-bar-nav-icon>
 
       <v-toolbar-items color="grey darken-3">
         <v-btn color="grey darken-3" to="/">

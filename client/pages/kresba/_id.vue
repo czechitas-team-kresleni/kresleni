@@ -1,13 +1,12 @@
 <template>
 <v-model>
     <div class="d-flex mb-2" style="align-items: center">
-        <v-avatar
-            size="55px">
-                <img
-                class="mr-2"
-                alt="Avatar"
-                v-bind:src="user.foto"
-                >     
+        <v-avatar>
+            <img
+            class="mr-2"
+            v-bind:alt="user.name"
+            v-bind:src="user.foto"
+            >     
         </v-avatar>
 
         <span class="clickable" 
@@ -17,7 +16,6 @@
 
     <v-img
         :src="kresba.link" 
-        height="500"
         class="text-right pa-2"
         >           
     </v-img>

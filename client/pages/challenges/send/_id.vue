@@ -11,42 +11,33 @@
         sm="6"
       >
         <v-card
-          class="pa-3"
-          outlined
-          tile
-        >
+          class="pa-3">
           <h3>Název</h3>
-      <p>{{game.name}}</p>
+          <p>{{game.name}}</p>
 
-      <h3>Popis</h3>
+          <h3>Popis</h3>
+          <p>{{game.description}}</p>
 
-      <p>{{game.description}}</p>
+          <h3> Počet bodů</h3>
 
-      <h3> Počet bodů</h3>
-
-      <div>
+          <div>
           {{game.exp}}
-        </div>
+          </div>
         </v-card>
       </v-col>
+
       <v-col 
       cols="12"
-        sm="6"
-        
-      >
+        sm="6">
         <v-card
-          class="pa-3"
-          outlined
-          tile
-        >
+          class="pa-3">
 
-        <div>
-        <h3> Nahrát</h3>
-        <v-file-input
-        label="File input"
-        filled
-        prepend-icon="mdi-camera"
-        ></v-file-input>
+          <div>
+          <h3> Nahrát</h3>
+          <v-file-input
+            label="Nahrát kresbu"
+            prepend-icon="mdi-camera"
+          ></v-file-input>
 
         <h3>Link</h3>
             <v-text-field label="odkaz" :rules="rules" v-model="link" hide-details="auto"></v-text-field>
