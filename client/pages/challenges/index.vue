@@ -1,7 +1,7 @@
 <template>
 <div>
     <h2 style="text-align: center; font-weight: 400;"> Předchozí výzvy</h2>
-<blockquote class="blockquote">Our constantly changing drawing challenge themes and art prompts are guaranteed to get you outside of your comfort zone while helping you sharpen your skills, gain exposure, and win awesome prizes from our partners. From doodling on coffee cups, to illustrating strangers, explore just how much you can push your creative limits!</blockquote>
+<blockquote class="blockquote">Tady se můžeš podívat, jak se s výzvami vyrovnali ostatní, stačí kliknout na vybranou výzvu  </blockquote>
 
 <hr>
 <radek v-for="game in games" 

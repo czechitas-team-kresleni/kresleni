@@ -20,12 +20,18 @@
         >           
     </v-img>
 
-    <v-icon v-on:click="like" >
+    <v-icon v-on:click="like" class="m-2">
          {{ hasLiked ? 'mdi-heart' : 'mdi-heart-outline' }}
         <v-btn icon dark>
 
         </v-btn>
-     </v-icon> {{ kresba.likes }}
+    </v-icon> <span class="p-1" style="font-weight: 400">{{ kresba.likes }}</span>
+
+    <v-divider class="my-3"></v-divider>
+
+    <div> {{kresba.note}}
+    </div>
+
 </v-model>
   
 </template>

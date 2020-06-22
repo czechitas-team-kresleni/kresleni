@@ -161,4 +161,15 @@ export default {
 .clickable {
   cursor: pointer;
 }
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   font-family: 'Merriweather', serif;
+}
 </style>

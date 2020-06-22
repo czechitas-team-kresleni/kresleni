@@ -11,7 +11,8 @@
     <v-divider></v-divider>
 
     <div>
-      <h3 style="text-align: center;  font-weight: 400;">Hry, které jste ???</h3>
+      <h3 style="text-align: center;  font-weight: 400;">Výzvy, které jsi zatím nesplnil/a</h3>
+      <p>Nestihl/a jsi splnit výzvu v den, kdy byla zadána? Nevadí, můžeš se s ní vypořádat dodatečně. Tady najdeš přehled výzev, které jsi zatím nesplnil/a. Když na výzvu klikneš, budeš ji moci splnit dodatečně.</p>
       <div class="d-flex ma-6" style="justify-content: space-between;">
         <div v-for="game in games" :key="game.id">
           <span v-on:click="redirect(game.id)" class="clickable">{{ game.name }}</span>
