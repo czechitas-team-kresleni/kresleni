@@ -78,7 +78,7 @@
 
     <v-main style="background-color:#FAFAFA" class="md-padding">
       <v-container fluid>
-        <span class="clickable" @click="back">zpět</span>
+        <span class="clickable" @click="back" style="text-decoration: underline;">zpět</span>
         <v-row align="center" justify="center">
           <v-col cols="12">
             <nuxt />

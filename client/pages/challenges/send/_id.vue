@@ -56,7 +56,7 @@
             v-model="note">
             </v-textarea>
 
-         <v-btn block color="grey" dark
+         <v-btn block color="grey darken-2" dark
          v-on:click="sendForm"
          v-if="!hasSent"
          >Nahrát kresbu a poznámky</v-btn>

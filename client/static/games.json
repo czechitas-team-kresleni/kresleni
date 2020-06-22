@@ -1,20 +1,38 @@
 [
   {
     "id": 1,
-    "name": "testovaci hra",
-    "exp": 234,
-    "description": "Our constantly changing drawing challenge themes and art prompts are guaranteed to get you outside of your comfort zone while helping you sharpen your skills, gain exposure, and win awesome prizes from our partners. From doodling on coffee cups, to illustrating strangers, explore just how much you can push your creative limits!"
+    "name": "Procvič si anatomii rukou",
+    "exp": 15,
+    "description": "Nakresli nebo namaluj 5 ruk v různých pózách!"
   },
   {
     "id": 2,
-    "name": "142124 hra",
-    "exp": 34,
-    "description": "Our constantly changing drawing challenge themes and art prompts are guaranteed to get you outside of your comfort zone while helping you sharpen your skills, gain exposure, and win awesome prizes from our partners. From doodling on coffee cups, to illustrating strangers, explore just how much you can push your creative limits!"
+    "name": "Nakresli krajinu",
+    "exp": 25,
+    "description": "Najdi si fotku nebo obrázek s lesem a překresli to. Všimni si větších tvarů a snaž si je zjednodušit."
   },
   {
     "id": 3,
-    "name": "nova hra",
-    "exp": 34,
-    "description": "Our constantly changing drawing challenge themes and art prompts are guaranteed to get you outside of your comfort zone while helping you sharpen your skills, gain exposure, and win awesome prizes from our partners. From doodling on coffee cups, to illustrating strangers, explore just how much you can push your creative limits!"
+    "name": "Natrénuj si pózy",
+    "exp": 30,
+    "description": "Najdi si fotku a nakresli podle reference sedícího člověka. Vnímej perspektivu pozice nohou a kole vůči pohledu kamery."
+  },
+  {
+    "id": 4,
+    "name": "Nakresli vozidlo",
+    "exp": 30,
+    "description": "Najdi si fotku vozidla tvého přání (např. auto, tank, apod.) a nakresli dle předlohy. Zkus si design něčím opepřit či zjednodušit."
+  },
+  {
+    "id": 5,
+    "name": "Nakresli fantasy krajinu",
+    "exp": 25,
+    "description": "Najdi si fotku krajinu, kterou budeš používat jako předlohu na kresbu krajiny, které přidej fantasy atmosféru."
+  },
+  {
+    "id": 6,
+    "name": "Volné téma",
+    "exp": 30,
+    "description": "Jdi ven a nakresli něco zajímavého z procházky!!"
   }
 ]
