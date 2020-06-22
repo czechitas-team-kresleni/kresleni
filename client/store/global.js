@@ -19,10 +19,6 @@ export const getters = { //getters - jen pro čtení
     let users = [];
     state.users.forEach(function (user) {
 
-      // state.levels.find(exp => {
-
-      // })
-
       //moje odevzdane hry
       let myhandins = state.kresby.filter(handin => handin.user_id === user.id);
       let finished_games = [];
@@ -67,9 +63,7 @@ export const getters = { //getters - jen pro čtení
       }
 
       users.push(user)
-
-      //
-      //user.procento = nejaky vypocet
+      
     })
     return users;
 
