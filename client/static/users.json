@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Alena",
-        "foto": "https://images.pexels.com/photos/3404200/pexels-photo-3404200.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "foto": "https://cdn.pixabay.com/photo/2016/03/13/10/15/alice-in-wonderland-1253474_1280.jpg",
         "text": "Alena rada kresli"
     },
     {
@@ -15,7 +15,7 @@
         "id": 3,
         "name": "Kokos",
         "foto": "https://images.unsplash.com/photo-1581375321224-79da6fd32f6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-        "text": "Kokos je sikovny"
+        "text": "Kokos se pokouší pochopit NUXT"
     },
     {
         "id": 4,

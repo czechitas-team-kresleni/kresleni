@@ -3,12 +3,14 @@
     "id": 0,
     "user_id": 1,
     "game_id": 1,
-    "link": "https://picsum.photos/500/300" 
+    "link": "https://picsum.photos/500/300",
+    "note":"nějaká poznámka"
   },
   {
     "id": 1,
     "user_id": 2,
     "game_id": 1,
-    "link": "https://picsum.photos/500/300"
+    "link": "https://picsum.photos/500/300",
+    "note":"taky nějaká poznámka"
   }
 ]

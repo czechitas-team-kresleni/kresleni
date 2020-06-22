@@ -57,14 +57,14 @@
         <v-textarea
           solo
           name="input-7-4"
-          label="Sem si můžeš napsat poznámku"
+          label="Sem můžeš napsat poznámku"
           v-model="note"></v-textarea>
 
          <v-btn block color="grey" dark
          v-on:click="sendForm"
          v-if="!hasSent"
          >Nahrát kresbu a poznámky</v-btn>
-          <span v-else>Již odevzdáno</span>  
+         <span v-else>Již odevzdáno</span>  
         </div>
 
         </div>

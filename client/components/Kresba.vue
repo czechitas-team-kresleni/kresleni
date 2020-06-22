@@ -1,41 +1,37 @@
 <template>
 <div>
 
-
     <div class="d-flex mb-2" style="align-items: center">
-<v-avatar
-                  size="36px"
-                >
-                  <img
-                  class="mr-2"
-                    alt="Avatar"
-                    v-bind:src="user.foto"
-                  >
-                  
-     </v-avatar>
-    <span @click="goToProfile">{{user.name}}</span>
+        <v-avatar
+        size="36px"
+        >
+             <img
+            class="mr-2"
+            alt="Avatar"
+            v-bind:src="user.foto"
+            >      
+        </v-avatar>
+
+        <span @click="goToProfile">{{user.name}}</span>
     </div>
     
-
-  <v-item >
-              <v-img
-                :src="kresba.link"
-                height="150"
-                class="text-right pa-2 clickable"
-                v-on:click='redirect'
-              >
-                  
-              </v-img>
+    <v-item>
+        <v-img
+        :src="kresba.link"
+        height="150"
+        class="text-right pa-2 clickable"
+        v-on:click='redirect'
+        >       
+        </v-img>
     </v-item>
+
     <v-icon v-on:click="like" >
          {{ hasLiked ? 'mdi-heart' : 'mdi-heart-outline' }}
-        <v-btn
-            icon
-             dark
-                >
+        <v-btn icon dark>
+
         </v-btn>
      </v-icon> {{ kresba.likes }}
- </div>           
+</div>           
 </template>
 
 <script>
