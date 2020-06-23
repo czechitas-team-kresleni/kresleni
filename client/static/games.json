@@ -2,37 +2,37 @@
   {
     "id": 1,
     "name": "Procvič si anatomii rukou",
-    "exp": 15,
+    "exp": 55,
     "description": "Nakresli nebo namaluj 5 ruk v různých pózách!"
   },
   {
     "id": 2,
     "name": "Nakresli krajinu",
-    "exp": 25,
+    "exp": 65,
     "description": "Najdi si fotku nebo obrázek s lesem a překresli to. Všimni si větších tvarů a snaž si je zjednodušit."
   },
   {
     "id": 3,
     "name": "Natrénuj si pózy",
-    "exp": 30,
+    "exp": 70,
     "description": "Najdi si fotku a nakresli podle reference sedícího člověka. Vnímej perspektivu pozice nohou a kole vůči pohledu kamery."
   },
   {
     "id": 4,
     "name": "Nakresli vozidlo",
-    "exp": 30,
+    "exp": 70,
     "description": "Najdi si fotku vozidla tvého přání (např. auto, tank, apod.) a nakresli dle předlohy. Zkus si design něčím opepřit či zjednodušit."
   },
   {
     "id": 5,
     "name": "Nakresli fantasy krajinu",
-    "exp": 25,
+    "exp": 65,
     "description": "Najdi si fotku krajinu, kterou budeš používat jako předlohu na kresbu krajiny, které přidej fantasy atmosféru."
   },
   {
     "id": 6,
     "name": "Volné téma",
-    "exp": 30,
+    "exp": 70,
     "description": "Jdi ven a nakresli něco zajímavého z procházky!!"
   }
 ]
