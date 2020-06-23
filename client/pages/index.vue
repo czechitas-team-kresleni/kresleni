@@ -4,7 +4,7 @@
     <blockquote>
       <p
         class="m-4"
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque mollitia amet voluptatibus sunt tempora commodi exercitationem cumque natus dicta? Repudiandae, cumque. Minus, placeat aperiam excepturi consequuntur labore ducimus quam.</p>
+      >Kreslíš rád/a a chceš se zlepšovat? Bez tréninku to nepůjde. Nejlepší je každý den něco nakreslit. Proto tu jsme s denními výzvami. Je jen na tobě, jestli najdeš čas a zkusíš výzvu splnit a sdílet tvoje kresby s ostatními. Kam se posuneš za měsíc? Co dokáží ostatní? Chceš to zjistit? Stačí se přidat! </p>
     </blockquote>
     <v-btn
       block

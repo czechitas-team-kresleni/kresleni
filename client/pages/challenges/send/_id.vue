@@ -37,7 +37,7 @@
               v-on:click="sendForm"
               v-if="!hasSent"
             >Nahrát kresbu a poznámky</v-btn>
-            <span v-else>Již odevzdáno</span>
+            <strong v-else>Dnešní výzvu jsi již splnil/a</strong>
           </v-card>
         </v-col>
       </v-row>

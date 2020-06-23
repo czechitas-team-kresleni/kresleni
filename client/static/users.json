@@ -3,25 +3,25 @@
         "id": 1,
         "name": "Alena",
         "foto": "https://cdn.pixabay.com/photo/2016/03/13/10/15/alice-in-wonderland-1253474_1280.jpg",
-        "text": "Alena rada kresli"
+        "text": "Ráda kreslím a mým snem je jednou ilustrovat knížky pro děti."
     },
     {
         "id": 2,
         "name": "Jahůdka",
         "foto": "https://images.unsplash.com/photo-1560155069-ad79768f2666?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1900&q=80",
-        "text": "Jahudka taky kresli"
+        "text": "Ráda zkouším nové věci, abych zjistila, co mi zároveň jde a baví. Že by to bylo kreslení?"
     },
     {
         "id": 3,
         "name": "Kokos",
         "foto": "https://images.unsplash.com/photo-1581375321224-79da6fd32f6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-        "text": "Kokos se pokouší pochopit NUXT"
+        "text": "Kreslit neumím a pokouším se pochopit Nuxt. Tady jsem spíš náhodou."
     },
     {
         "id": 4,
         "name": "Melounek",
         "foto": "https://images.unsplash.com/photo-1582281298055-e25b84a30b0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2021&q=80",
-        "text": "Melounek se uci kreslit"
+        "text": "Ve škole se nudím a různě čmárám do sešitů. Máma říká, že to k ničemu není, ale mě to baví."
     }
     
 

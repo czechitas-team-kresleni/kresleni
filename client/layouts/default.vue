@@ -88,7 +88,7 @@
     </v-main>
 
     <v-footer :inset="footer.inset" app color="grey darken-3">
-      <span class="px-4 light_text">&copy; {{ new Date().getFullYear() }}</span>
+      <span class="px-4 light_text text-center">&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
