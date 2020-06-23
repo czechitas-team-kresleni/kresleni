@@ -62,10 +62,10 @@
 
       <v-toolbar-items color="grey darken-3">
         <v-btn color="grey darken-3" to="/">
-          <span class="light_text">Domu</span>
+          <span class="light_text">Domů</span>
         </v-btn>
         <v-btn color="grey darken-3" :to="'/challenges/send/' + last">
-          <span class="light_text">Dnesni</span>
+          <span class="light_text">Dnešní</span>
         </v-btn>
         <v-btn color="grey darken-3" to="/challenges">
           <span class="light_text">Galerie</span>
