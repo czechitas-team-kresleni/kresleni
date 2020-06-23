@@ -45,7 +45,7 @@
             ></v-file-input>
 
           <h3>Link</h3>
-            <v-text-field label="odkaz" :rules="rules" v-model="link" hide-details="auto">
+            <v-text-field label="odkaz"  v-model="link" hide-details="auto">
             </v-text-field>
       
           <h3> Vlastní poznámky</h3>
