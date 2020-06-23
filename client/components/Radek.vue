@@ -10,7 +10,7 @@
       icon="mdi-draw">
       <div  class="d-flex" style="justify-content: space-between">
            <h4 class="text-left ml-3">{{title}}</h4>
-           <v-btn class="float-right" :to="'/challenges/' + game.id">Celá galerie</v-btn>
+           <v-btn class="float-right" color="grey darken-2" :to="'/challenges/' + game.id">Celá galerie</v-btn>
       </div>
         </v-alert>
      

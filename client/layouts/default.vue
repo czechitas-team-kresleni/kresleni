@@ -59,7 +59,6 @@
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
         >
       </v-app-bar-nav-icon>
-
       <v-toolbar-items color="grey darken-3">
         <v-btn color="grey darken-3" to="/">
           <span class="light_text">Domů</span>
@@ -74,6 +73,8 @@
           <span class="light_text">Profil</span>
         </v-btn>
       </v-toolbar-items>
+    
+  
     </v-app-bar>
 
     <v-main style="background-color:#FAFAFA" class="md-padding">

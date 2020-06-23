@@ -8,5 +8,41 @@
         "id": 2,
         "kresba_id":1,
         "user_id": 3
+    },
+    {
+        "id": 3,
+        "kresba_id":2,
+        "user_id": 4
+    },
+    {
+        "id": 4,
+        "kresba_id":10,
+        "user_id": 4
+    },
+    {
+        "id": 5,
+        "kresba_id":11,
+        "user_id": 2
+    },
+    {
+        "id": 6,
+        "kresba_id":4,
+        "user_id": 3
+    },
+    {
+        "id": 7,
+        "kresba_id":8,
+        "user_id": 2
+    },
+    {
+        "id": 8,
+        "kresba_id":9,
+        "user_id": 3
+    },
+    {
+        "id": 9,
+        "kresba_id":9,
+        "user_id": 4
     }
+    
 ]
