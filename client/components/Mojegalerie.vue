@@ -4,7 +4,7 @@
 
       <v-card style="height: inherit" class="pa-2 ml-2">
 <v-alert
-      color="grey darken-2"
+      color="grey darken-3"
       dark
       dense
       

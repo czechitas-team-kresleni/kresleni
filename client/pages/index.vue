@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h2>Vítej v partě!</h2>
-    <blockquote class="blockquote">
+    <h2>Vítej v kreslírně!</h2>
+    <blockquote>
       <p
         class="m-4"
       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque mollitia amet voluptatibus sunt tempora commodi exercitationem cumque natus dicta? Repudiandae, cumque. Minus, placeat aperiam excepturi consequuntur labore ducimus quam.</p>
     </blockquote>
     <v-btn
       block
-      color="grey darken-2"
+      color="grey darken-3"
       dark
       :to="'/challenges/send/' + last"
     >Mrkni se na dnešní výzvu</v-btn>
@@ -23,9 +23,10 @@
       <div class="d-flex ma-6" style="justify-content: space-between;">
         <!--<div style="background-color: #616161;" v-for="game in games" :key="game.id">-->
         <v-alert
-          color="grey darken-2"
+          color="grey darken-3"
           dark
           dense
+          icon="mdi-draw"
           style="width: 250px;"
           v-for="game in games"
           :key="game.id"

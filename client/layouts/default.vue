@@ -1,6 +1,6 @@
 
 <template>
-  <v-app id="sandbox">
+  <v-app>
     <v-navigation-drawer
       v-model="primaryDrawer.model"
       :clipped="primaryDrawer.clipped"
@@ -15,7 +15,7 @@
     >
       <div>
 
-        <b-alert show class="welcome_user my-0 pa-4">Vitej zpet, {{user.name}}!</b-alert>
+        <b-alert show class="welcome_user my-0 pa-4">Ahoj, {{user.name}}!</b-alert>
 
         <v-divider class="my-3"></v-divider>
 
@@ -44,11 +44,11 @@
         </v-progress-linear>
 
         <div class="text-center" v-if="!user.level.max">
-          Chybí vám <strong>{{user.level.exp_needed}}</strong> {{ points(user.level.exp_needed) }} do další úrovně
+          Chybí Ti <strong>{{user.level.exp_needed}}</strong> {{ points(user.level.exp_needed) }} do další úrovně. Jen tak dál!
         </div>
 
         <v-divider class="my-3"></v-divider>
-        <b-alert show class="sidebar-level pa-4 mx-3">{{user.level.nazev}}</b-alert>
+        <b-alert show color="grey darken-3" class="sidebar-level pa-4 mx-3">{{user.level.nazev}}</b-alert>
 
       </div>
     </v-navigation-drawer>
@@ -162,19 +162,21 @@ export default {
   cursor: pointer;
 }
 
-body{
+/*body{
   font-family: 'Montserrat', sans-serif;
 
 
-}
+}*/
 
 h1,
 h2,
 h3,
 h4 {
-   font-family: 'Merriweather', serif;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
 }
 h2,
+h4,
 h3 {
   text-shadow: 0px 1px 2px  #BDBDBD;
 }

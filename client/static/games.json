@@ -14,7 +14,7 @@
   {
     "id": 3,
     "name": "Natrénuj si pózy",
-    "exp": 70,
+    "exp": 75,
     "description": "Najdi si fotku a nakresli podle reference sedícího člověka. Vnímej perspektivu pozice nohou a kole vůči pohledu kamery."
   },
   {
@@ -33,6 +33,6 @@
     "id": 6,
     "name": "Volné téma",
     "exp": 70,
-    "description": "Jdi ven a nakresli něco zajímavého z procházky!!"
+    "description": "Jdi ven a nakresli něco zajímavého ze života!!"
   }
 ]
