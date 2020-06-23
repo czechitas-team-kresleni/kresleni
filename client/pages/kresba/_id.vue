@@ -17,6 +17,7 @@
     <v-img
         :src="kresba.link" 
         class="text-right pa-2"
+        alt="kresba"
         >           
     </v-img>
 
