@@ -43,17 +43,7 @@ export default {
             default: {}
         }
     }, 
-    
-
-   // data() {
-   //     return {
-   //         active: false,
-   //         count: 4,
-   //         user: {}
-   //     }
-        
-  //  },
-
+      
     methods: {
         like() {
             if(!this.hasLiked) {
