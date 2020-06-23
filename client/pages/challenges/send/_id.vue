@@ -1,6 +1,6 @@
 <template>
   <div class="grey lighten-5 ma-0">
-    <h2>Dnešní výzva je: {{game.name}}</h2>
+    <h2>{{game.name}}</h2>
 
     <v-container>
       <v-row>

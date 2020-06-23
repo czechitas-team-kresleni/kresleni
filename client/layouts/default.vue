@@ -162,11 +162,11 @@ export default {
   cursor: pointer;
 }
 
-/*body{
-  font-family: 'Montserrat', sans-serif;
+body{
+  font-family: 'Roboto', sans-serif;
 
 
-}*/
+}
 
 h1,
 h2,
