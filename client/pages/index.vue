@@ -21,7 +21,7 @@
         class="m-4"
       >Nestihl/a jsi splnit výzvu v den, kdy byla zadána? Nevadí, můžeš se s ní vypořádat dodatečně. Tady najdeš přehled výzev, které jsi zatím nesplnil/a. Když na výzvu klikneš, budeš ji moci splnit dodatečně.</p>
       <div class="d-flex ma-6" style="justify-content: space-between;">
-        <!--<div style="background-color: #616161;" v-for="game in games" :key="game.id">-->
+        
         <v-alert
           color="grey darken-3"
           dark

@@ -25,7 +25,7 @@
             <v-file-input label="Nahrát kresbu" prepend-icon="mdi-camera"></v-file-input>
 
             <h4 class="mt-5">Link</h4>
-            <v-text-field label="odkaz" :rules="rules" v-model="link" hide-details="auto"></v-text-field>
+            <v-text-field label="odkaz" v-model="link" hide-details="auto"></v-text-field>
 
             <h4 class="mt-5">Vlastní poznámky</h4>
             <v-textarea solo name="input-7-4" label="Sem můžeš napsat poznámku" v-model="note"></v-textarea>
