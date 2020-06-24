@@ -1,5 +1,5 @@
 <template>
-<v-model>
+<div>
     <div class="d-flex mb-2" style="align-items: center">
         <v-avatar>
             <img
@@ -33,7 +33,7 @@
     <div> {{kresba.note}}
     </div>
 
-</v-model>
+</div>
   
 </template>
 

@@ -4,7 +4,7 @@
     <blockquote>
       <p
         class="m-4"
-      >Kreslíš rád/a a chceš se zlepšovat? Bez tréninku to nepůjde. Nejlepší je každý den něco nakreslit. Proto tu jsme s denními výzvami. Je jen na tobě, jestli najdeš čas a zkusíš výzvu splnit a sdílet tvoje kresby s ostatními. Kam se posuneš za měsíc? Co dokáží ostatní? Chceš to zjistit? Stačí se přidat! </p>
+      >Kreslíš rád/a a chceš se zlepšovat? Bez tréninku to nepůjde. Nejlepší je každý den něco nakreslit. Proto tu jsme s denními výzvami. Je jen na tobě, jestli najdeš čas, zkusíš výzvu splnit a sdílet tvoje kresby s ostatními. Kam se posuneš za měsíc? Co dokáží ostatní? Chceš to zjistit? Stačí se přidat! </p>
     </blockquote>
     <v-btn
       block
