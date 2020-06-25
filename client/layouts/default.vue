@@ -73,8 +73,8 @@
           <span class="light_text">Profil</span>
         </v-btn>
       </v-toolbar-items>
-    
-  
+
+
     </v-app-bar>
 
     <v-main style="background-color:#FAFAFA" class="md-padding">
@@ -194,7 +194,7 @@ p {
 
 @media(max-width:1200px){
   .hideable {
-    display: none;
+    display: none !important;
   }
 
   .md-padding {
